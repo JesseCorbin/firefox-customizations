@@ -1,0 +1,125 @@
+/*  */
+
+.titlebar-spacer {
+    display: none !important;
+}
+ 
+ 
+#navigator-toolbox {
+    border: 0px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ 
+#TabsToolbar {
+    width: 600px !important;
+ 
+}
+ 
+ 
+#nav-bar {
+    background: transparent !important;
+}
+ 
+ 
+#forward-button {
+    display: none !important;
+}
+ 
+#tracking-protection-icon-container {
+    display: none !important;
+}
+ 
+#urlbar-container {
+    min-width: 100px !important;
+    border-radius: 20px !important;
+}
+
+#urlbar {
+    border-radius: 20px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+ 
+#page-action-buttons {
+    display: none !important;
+}
+
+/* ----------------------------- Auto-hide ----------------------------- */
+/* Auto-hide the tab bar */
+/* Auto-hide the tab bar but keep it 1px tall */
+/* #TabsToolbar {
+    height: 1px !important;
+    min-height: 1px !important;
+    opacity: 0;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+#TabsToolbar:hover,
+#navigator-toolbox:hover #TabsToolbar {
+    height: var(--tab-min-height) !important;
+    min-height: var(--tab-min-height) !important;
+    opacity: 1 !important;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+#nav-bar {
+    height: 1px !important;
+    min-height: 1px !important;
+    opacity: 0.2;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+#navigator-toolbox:hover #nav-bar {
+    height: var(--toolbar-height) !important;
+    min-height: var(--toolbar-height) !important;
+    opacity: 1 !important;
+    transition: height 0.5s ease, opacity 0.5s ease;
+} */
+
+
+/* Collapse the TabsToolbar */
+#TabsToolbar {
+    visibility: collapse;
+    opacity: 0;
+    margin-top: -15px; /* Create a hover zone just above the top of the window */
+    /* transition-delay: 0.1s; */
+    transition: height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, margin-top 0.5s ease;
+}
+
+/* Set hover zone to expand the toolbar */
+#navigator-toolbox:hover #TabsToolbar {
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-top: 0 !important;
+    transition-delay: 0.5s;
+    transition: height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease margin-top 0.5s ease;
+    
+}
+
+/* Auto-hide the URL bar with a 1px hoverable area */
+#nav-bar {
+    height: 1px !important;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+#navigator-toolbox:hover #nav-bar {
+    height: var(--toolbar-height) !important;
+    opacity: 1 !important;
+    transition-delay: 0.5s;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+#urlbar-container {
+    height: 1px !important;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+#navigator-toolbox:hover #urlbar-container {
+    height: var(--urlbar-height) !important;
+    opacity: 1 !important;
+    transition-delay: 0.5s;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
